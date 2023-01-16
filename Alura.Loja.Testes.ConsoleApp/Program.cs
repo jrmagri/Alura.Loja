@@ -26,7 +26,7 @@ namespace Alura.Loja.Testes.ConsoleApp
                 Produto primeiro = repo.Produtos().First();
                 primeiro.Nome = "Harry potter e a ordem da Fenix ( EDITADO )";
                 repo.Atualizar(primeiro);
-                
+               
             }
 
             RecuperarProdutosEntity();
@@ -39,12 +39,11 @@ namespace Alura.Loja.Testes.ConsoleApp
             using (var repo = new ProdutoDAOEntity())
             {
                 IList<Produto> produtos = repo.Produtos();
-               
+
                 foreach (var item in produtos)
                 {
                     repo.Remover(item);
                 }
-
                 Console.ReadLine();
             }
         }
